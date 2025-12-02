@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appliance Services in Kittanning, PA - River Run Appliance Repair</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3b82f6',
+                        secondary: '#1f2937',
+                        accent: '#fbbf24',
+                        darkbg: '#111827',
+                        cardbg: '#1f2937',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-darkbg font-sans text-gray-100">
+
+    <!-- Topbar / Navbar -->
+    <nav class="bg-cardbg shadow-md fixed w-full z-50 top-0 border-b border-gray-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="../index.html">
+                        <img class="h-16 w-auto" src="../RiverRun_Logo.avif" alt="River Run Appliance Repair">
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="../index.html" class="text-gray-300 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                    
+                    <!-- Locations -->
+                    <div class="relative dropdown">
+                        <button class="text-gray-300 hover:text-primary px-3 py-2 rounded-md text-sm font-medium inline-flex items-center">
+                            Locations
+                            <svg class="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="dropdown-menu absolute hidden bg-cardbg shadow-lg rounded-md mt-0 w-40 py-2 border border-gray-700">
+                            <a href="../Midlothian/location.html" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white">Midlothian, VA</a>
+                            <a href="location.html" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white">Kittanning, PA</a>
+                        </div>
+                    </div>
+
+                    <!-- Services -->
+                    <div class="relative dropdown">
+                        <button class="text-gray-300 hover:text-primary px-3 py-2 rounded-md text-sm font-medium inline-flex items-center">
+                            Services
+                            <svg class="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="dropdown-menu absolute hidden bg-cardbg shadow-lg rounded-md mt-0 w-56 py-2 border border-gray-700">
+                            <a href="../Midlothian/services.html" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white">Midlothian, VA</a>
+                            <a href="services.html" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white">Kittanning, PA</a>
+                        </div>
+                    </div>
+
+                    <!-- Brands -->
+                    <div class="relative dropdown">
+                        <button class="text-gray-300 hover:text-primary px-3 py-2 rounded-md text-sm font-medium inline-flex items-center">
+                            Brands We Service
+                            <svg class="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="dropdown-menu absolute hidden bg-cardbg shadow-lg rounded-md mt-0 w-64 py-2 border border-gray-700">
+                            <a href="../Midlothian/brands.html" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white">Midlothian, VA</a>
+                            <a href="brands.html" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white">Kittanning, PA</a>
+                        </div>
+                    </div>
+
+                    <a href="../contact.html" class="text-gray-300 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Contact Us</a>
+                    <a href="../blog.html" class="text-gray-300 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Blog</a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-gray-300 hover:text-primary focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-cardbg border-t border-gray-700">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="../index.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">Home</a>
+                <a href="../Midlothian/location.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">Midlothian Location</a>
+                <a href="location.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">Kittanning Location</a>
+                <a href="../Midlothian/services.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">Midlothian Services</a>
+                <a href="services.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">Kittanning Services</a>
+                <a href="../contact.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">Contact Us</a>
+                <a href="../blog.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">Blog</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-32 mb-20">
+        <div class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-white mb-4">Our Services in Kittanning</h1>
+            <p class="text-xl text-gray-400">We repair a wide range of household appliances in Kittanning, PA.</p>
+        </div>
+
+        <div class="space-y-16">
+            <!-- Washing Machines -->
+            <div id="washing-machines" class="flex flex-col md:flex-row items-center bg-cardbg rounded-lg shadow-lg overflow-hidden border border-gray-700">
+                <div class="md:w-1/2">
+                    <img class="w-full h-64 object-cover" src="../images/washing_machine.jpg" alt="Washing Machines">
+                </div>
+                <div class="p-8 md:w-1/2">
+                    <h2 class="text-2xl font-bold text-white mb-4">Washing Machines</h2>
+                    <p class="text-gray-400 mb-4">Is your washing machine leaking, not spinning, or making loud noises? Our experts can diagnose and fix the problem quickly.</p>
+                    <ul class="list-disc list-inside text-gray-400">
+                        <li>Top Loaders</li>
+                        <li>Front Loaders</li>
+                        <li>Compact Washers</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Microwaves -->
+            <div id="microwaves" class="flex flex-col md:flex-row-reverse items-center bg-cardbg rounded-lg shadow-lg overflow-hidden border border-gray-700">
+                <div class="md:w-1/2">
+                    <img class="w-full h-64 object-cover" src="../images/kitchen.jpg" alt="Microwaves">
+                </div>
+                <div class="p-8 md:w-1/2">
+                    <h2 class="text-2xl font-bold text-white mb-4">Microwaves</h2>
+                    <p class="text-gray-400 mb-4">Microwave not heating or turntable not spinning? We repair built-in and countertop microwaves safely and efficiently.</p>
+                </div>
+            </div>
+
+            <!-- Dryers -->
+            <div id="dryers" class="flex flex-col md:flex-row items-center bg-cardbg rounded-lg shadow-lg overflow-hidden border border-gray-700">
+                <div class="md:w-1/2">
+                    <img class="w-full h-64 object-cover" src="../images/washing_machine.jpg" alt="Dryers">
+                </div>
+                <div class="p-8 md:w-1/2">
+                    <h2 class="text-2xl font-bold text-white mb-4">Dryers</h2>
+                    <p class="text-gray-400 mb-4">Don't let laundry pile up. We fix dryers that won't heat, won't tumble, or take too long to dry.</p>
+                    <ul class="list-disc list-inside text-gray-400">
+                        <li>Gas Dryers</li>
+                        <li>Electric Dryers</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Refrigerators -->
+            <div id="refrigerators" class="flex flex-col md:flex-row-reverse items-center bg-cardbg rounded-lg shadow-lg overflow-hidden border border-gray-700">
+                <div class="md:w-1/2">
+                    <img class="w-full h-64 object-cover" src="../images/refrigerator.jpg" alt="Refrigerators">
+                </div>
+                <div class="p-8 md:w-1/2">
+                    <h2 class="text-2xl font-bold text-white mb-4">Refrigerators</h2>
+                    <p class="text-gray-400 mb-4">A broken refrigerator is an emergency. We offer prompt repair services to save your food and your appliance.</p>
+                </div>
+            </div>
+
+            <!-- Dishwashers -->
+            <div id="dishwashers" class="flex flex-col md:flex-row items-center bg-cardbg rounded-lg shadow-lg overflow-hidden border border-gray-700">
+                <div class="md:w-1/2">
+                    <img class="w-full h-64 object-cover" src="../images/kitchen.jpg" alt="Dishwashers">
+                </div>
+                <div class="p-8 md:w-1/2">
+                    <h2 class="text-2xl font-bold text-white mb-4">Dishwashers</h2>
+                    <p class="text-gray-400 mb-4">Dishes coming out dirty? Leaking water? We can restore your dishwasher to peak performance.</p>
+                </div>
+            </div>
+
+            <!-- Electric Cooktop -->
+            <div id="cooktop" class="flex flex-col md:flex-row-reverse items-center bg-cardbg rounded-lg shadow-lg overflow-hidden border border-gray-700">
+                <div class="md:w-1/2">
+                    <img class="w-full h-64 object-cover" src="../images/oven.jpg" alt="Electric Cooktop">
+                </div>
+                <div class="p-8 md:w-1/2">
+                    <h2 class="text-2xl font-bold text-white mb-4">Electric Cooktop</h2>
+                    <p class="text-gray-400 mb-4">We repair cracked glass cooktops, burners that won't heat, and control board issues.</p>
+                </div>
+            </div>
+
+            <!-- Range and Oven -->
+            <div id="range-oven" class="flex flex-col md:flex-row items-center bg-cardbg rounded-lg shadow-lg overflow-hidden border border-gray-700">
+                <div class="md:w-1/2">
+                    <img class="w-full h-64 object-cover" src="../images/oven.jpg" alt="Range and Oven">
+                </div>
+                <div class="p-8 md:w-1/2">
+                    <h2 class="text-2xl font-bold text-white mb-4">Range and Oven</h2>
+                    <p class="text-gray-400 mb-4">From uneven baking to self-cleaning failures, we handle all range and oven repairs.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-gray-900 text-white py-8 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-4 md:mb-0">
+                <p>&copy; 2025 River Run Appliance Repair. All rights reserved.</p>
+            </div>
+            <div class="flex space-x-4">
+                <a href="../privacy.html" class="text-gray-400 hover:text-white">Privacy Policy</a>
+                <a href="../contact.html" class="text-gray-400 hover:text-white">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const btn = document.getElementById('mobile-menu-button');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

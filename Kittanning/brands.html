@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brands We Service in Kittanning, PA - River Run Appliance Repair</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3b82f6',
+                        secondary: '#1f2937',
+                        accent: '#fbbf24',
+                        darkbg: '#111827',
+                        cardbg: '#1f2937',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-darkbg font-sans text-gray-100">
+
+    <!-- Topbar / Navbar -->
+    <nav class="bg-cardbg shadow-md fixed w-full z-50 top-0 border-b border-gray-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="../index.html">
+                        <img class="h-16 w-auto" src="../RiverRun_Logo.avif" alt="River Run Appliance Repair">
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="../index.html" class="text-gray-300 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                    
+                    <!-- Locations -->
+                    <div class="relative dropdown">
+                        <button class="text-gray-300 hover:text-primary px-3 py-2 rounded-md text-sm font-medium inline-flex items-center">
+                            Locations
+                            <svg class="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="dropdown-menu absolute hidden bg-cardbg shadow-lg rounded-md mt-0 w-40 py-2 border border-gray-700">
+                            <a href="../Midlothian/location.html" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white">Midlothian, VA</a>
+                            <a href="location.html" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white">Kittanning, PA</a>
+                        </div>
+                    </div>
+
+                    <!-- Services -->
+                    <div class="relative dropdown">
+                        <button class="text-gray-300 hover:text-primary px-3 py-2 rounded-md text-sm font-medium inline-flex items-center">
+                            Services
+                            <svg class="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="dropdown-menu absolute hidden bg-cardbg shadow-lg rounded-md mt-0 w-56 py-2 border border-gray-700">
+                            <a href="../Midlothian/services.html" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white">Midlothian, VA</a>
+                            <a href="services.html" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white">Kittanning, PA</a>
+                        </div>
+                    </div>
+
+                    <!-- Brands -->
+                    <div class="relative dropdown">
+                        <button class="text-gray-300 hover:text-primary px-3 py-2 rounded-md text-sm font-medium inline-flex items-center">
+                            Brands We Service
+                            <svg class="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="dropdown-menu absolute hidden bg-cardbg shadow-lg rounded-md mt-0 w-64 py-2 border border-gray-700">
+                            <a href="../Midlothian/brands.html" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white">Midlothian, VA</a>
+                            <a href="brands.html" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white">Kittanning, PA</a>
+                        </div>
+                    </div>
+
+                    <a href="../contact.html" class="text-gray-300 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Contact Us</a>
+                    <a href="../blog.html" class="text-gray-300 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Blog</a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-gray-300 hover:text-primary focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-cardbg border-t border-gray-700">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="../index.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">Home</a>
+                <a href="../Midlothian/location.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">Midlothian Location</a>
+                <a href="location.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">Kittanning Location</a>
+                <a href="../Midlothian/services.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">Midlothian Services</a>
+                <a href="services.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">Kittanning Services</a>
+                <a href="../contact.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">Contact Us</a>
+                <a href="../blog.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">Blog</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-32 mb-20">
+        <div class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-white mb-4">Brands We Service in Kittanning</h1>
+            <p class="text-xl text-gray-400">We are authorized to repair appliances from all major manufacturers.</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <!-- Brand Items with Logo Placeholder -->
+            <div class="flex items-center p-4 bg-cardbg rounded-lg border border-gray-700 hover:border-primary transition duration-150">
+                <img src="https://placehold.co/50x50/3b82f6/ffffff?text=A" alt="Amana Logo" class="h-10 w-10 rounded-full mr-4">
+                <span class="text-lg font-medium text-gray-200">Amana</span>
+            </div>
+            <div class="flex items-center p-4 bg-cardbg rounded-lg border border-gray-700 hover:border-primary transition duration-150">
+                <img src="https://placehold.co/50x50/3b82f6/ffffff?text=E" alt="Electrolux Logo" class="h-10 w-10 rounded-full mr-4">
+                <span class="text-lg font-medium text-gray-200">Electrolux</span>
+            </div>
+            <div class="flex items-center p-4 bg-cardbg rounded-lg border border-gray-700 hover:border-primary transition duration-150">
+                <img src="https://placehold.co/50x50/3b82f6/ffffff?text=F" alt="Frigidaire Logo" class="h-10 w-10 rounded-full mr-4">
+                <span class="text-lg font-medium text-gray-200">Frigidaire</span>
+            </div>
+            <div class="flex items-center p-4 bg-cardbg rounded-lg border border-gray-700 hover:border-primary transition duration-150">
+                <img src="https://placehold.co/50x50/3b82f6/ffffff?text=FP" alt="Fisher Paykel Logo" class="h-10 w-10 rounded-full mr-4">
+                <span class="text-lg font-medium text-gray-200">Fisher Paykel</span>
+            </div>
+            <div class="flex items-center p-4 bg-cardbg rounded-lg border border-gray-700 hover:border-primary transition duration-150">
+                <img src="https://placehold.co/50x50/3b82f6/ffffff?text=GE" alt="GE Logo" class="h-10 w-10 rounded-full mr-4">
+                <span class="text-lg font-medium text-gray-200">GE</span>
+            </div>
+            <div class="flex items-center p-4 bg-cardbg rounded-lg border border-gray-700 hover:border-primary transition duration-150">
+                <img src="https://placehold.co/50x50/3b82f6/ffffff?text=H" alt="Hisense Logo" class="h-10 w-10 rounded-full mr-4">
+                <span class="text-lg font-medium text-gray-200">Hisense</span>
+            </div>
+            <div class="flex items-center p-4 bg-cardbg rounded-lg border border-gray-700 hover:border-primary transition duration-150">
+                <img src="https://placehold.co/50x50/3b82f6/ffffff?text=H" alt="Hotpoint Logo" class="h-10 w-10 rounded-full mr-4">
+                <span class="text-lg font-medium text-gray-200">Hotpoint</span>
+            </div>
+            <div class="flex items-center p-4 bg-cardbg rounded-lg border border-gray-700 hover:border-primary transition duration-150">
+                <img src="https://placehold.co/50x50/3b82f6/ffffff?text=I" alt="Inglis Logo" class="h-10 w-10 rounded-full mr-4">
+                <span class="text-lg font-medium text-gray-200">Inglis</span>
+            </div>
+            <div class="flex items-center p-4 bg-cardbg rounded-lg border border-gray-700 hover:border-primary transition duration-150">
+                <img src="https://placehold.co/50x50/3b82f6/ffffff?text=K" alt="Kenmore Logo" class="h-10 w-10 rounded-full mr-4">
+                <span class="text-lg font-medium text-gray-200">Kenmore</span>
+            </div>
+            <div class="flex items-center p-4 bg-cardbg rounded-lg border border-gray-700 hover:border-primary transition duration-150">
+                <img src="https://placehold.co/50x50/3b82f6/ffffff?text=KE" alt="Kenmore Elite Logo" class="h-10 w-10 rounded-full mr-4">
+                <span class="text-lg font-medium text-gray-200">Kenmore Elite</span>
+            </div>
+            <div class="flex items-center p-4 bg-cardbg rounded-lg border border-gray-700 hover:border-primary transition duration-150">
+                <img src="https://placehold.co/50x50/3b82f6/ffffff?text=KA" alt="KitchenAid Logo" class="h-10 w-10 rounded-full mr-4">
+                <span class="text-lg font-medium text-gray-200">KitchenAid</span>
+            </div>
+            <div class="flex items-center p-4 bg-cardbg rounded-lg border border-gray-700 hover:border-primary transition duration-150">
+                <img src="https://placehold.co/50x50/3b82f6/ffffff?text=JA" alt="JennAire Logo" class="h-10 w-10 rounded-full mr-4">
+                <span class="text-lg font-medium text-gray-200">JennAire</span>
+            </div>
+            <div class="flex items-center p-4 bg-cardbg rounded-lg border border-gray-700 hover:border-primary transition duration-150">
+                <img src="https://placehold.co/50x50/3b82f6/ffffff?text=LG" alt="LG Logo" class="h-10 w-10 rounded-full mr-4">
+                <span class="text-lg font-medium text-gray-200">LG</span>
+            </div>
+            <div class="flex items-center p-4 bg-cardbg rounded-lg border border-gray-700 hover:border-primary transition duration-150">
+                <img src="https://placehold.co/50x50/3b82f6/ffffff?text=M" alt="Maytag Logo" class="h-10 w-10 rounded-full mr-4">
+                <span class="text-lg font-medium text-gray-200">Maytag</span>
+            </div>
+            <div class="flex items-center p-4 bg-cardbg rounded-lg border border-gray-700 hover:border-primary transition duration-150">
+                <img src="https://placehold.co/50x50/3b82f6/ffffff?text=M" alt="Midea Logo" class="h-10 w-10 rounded-full mr-4">
+                <span class="text-lg font-medium text-gray-200">Midea</span>
+            </div>
+            <div class="flex items-center p-4 bg-cardbg rounded-lg border border-gray-700 hover:border-primary transition duration-150">
+                <img src="https://placehold.co/50x50/3b82f6/ffffff?text=R" alt="Roper Logo" class="h-10 w-10 rounded-full mr-4">
+                <span class="text-lg font-medium text-gray-200">Roper</span>
+            </div>
+            <div class="flex items-center p-4 bg-cardbg rounded-lg border border-gray-700 hover:border-primary transition duration-150">
+                <img src="https://placehold.co/50x50/3b82f6/ffffff?text=S" alt="Samsung Logo" class="h-10 w-10 rounded-full mr-4">
+                <span class="text-lg font-medium text-gray-200">Samsung</span>
+            </div>
+            <div class="flex items-center p-4 bg-cardbg rounded-lg border border-gray-700 hover:border-primary transition duration-150">
+                <img src="https://placehold.co/50x50/3b82f6/ffffff?text=SQ" alt="Speed Queen Logo" class="h-10 w-10 rounded-full mr-4">
+                <span class="text-lg font-medium text-gray-200">Speed Queen</span>
+            </div>
+            <div class="flex items-center p-4 bg-cardbg rounded-lg border border-gray-700 hover:border-primary transition duration-150">
+                <img src="https://placehold.co/50x50/3b82f6/ffffff?text=W" alt="Whirlpool Logo" class="h-10 w-10 rounded-full mr-4">
+                <span class="text-lg font-medium text-gray-200">Whirlpool</span>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-gray-900 text-white py-8 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-4 md:mb-0">
+                <p>&copy; 2025 River Run Appliance Repair. All rights reserved.</p>
+            </div>
+            <div class="flex space-x-4">
+                <a href="../privacy.html" class="text-gray-400 hover:text-white">Privacy Policy</a>
+                <a href="../contact.html" class="text-gray-400 hover:text-white">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const btn = document.getElementById('mobile-menu-button');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

@@ -99,10 +99,43 @@
         <div id="mobile-menu" class="hidden md:hidden bg-cardbg border-t border-gray-700">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 <a href="../index.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">Home</a>
-                <a href="../Midlothian/location.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">Midlothian Location</a>
-                <a href="location.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">Kittanning Location</a>
-                <a href="../Midlothian/services.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">Midlothian Services</a>
-                <a href="services.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">Kittanning Services</a>
+                
+                <!-- Locations Mobile Dropdown -->
+                <div>
+                    <button onclick="toggleMobileSubmenu('mobile-locations-submenu')" class="w-full text-left flex justify-between items-center px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none">
+                        Locations
+                        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div id="mobile-locations-submenu" class="hidden pl-4 space-y-1">
+                        <a href="../Midlothian/location.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-400 hover:text-white hover:bg-gray-600">Midlothian, VA</a>
+                        <a href="location.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-400 hover:text-white hover:bg-gray-600">Kittanning, PA</a>
+                    </div>
+                </div>
+
+                <!-- Services Mobile Dropdown -->
+                <div>
+                    <button onclick="toggleMobileSubmenu('mobile-services-submenu')" class="w-full text-left flex justify-between items-center px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none">
+                        Services
+                        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div id="mobile-services-submenu" class="hidden pl-4 space-y-1">
+                        <a href="../Midlothian/services.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-400 hover:text-white hover:bg-gray-600">Midlothian, VA</a>
+                        <a href="services.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-400 hover:text-white hover:bg-gray-600">Kittanning, PA</a>
+                    </div>
+                </div>
+
+                <!-- Brands Mobile Dropdown -->
+                <div>
+                    <button onclick="toggleMobileSubmenu('mobile-brands-submenu')" class="w-full text-left flex justify-between items-center px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none">
+                        Brands We Service
+                        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div id="mobile-brands-submenu" class="hidden pl-4 space-y-1">
+                        <a href="../Midlothian/brands.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-400 hover:text-white hover:bg-gray-600">Midlothian, VA</a>
+                        <a href="brands.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-400 hover:text-white hover:bg-gray-600">Kittanning, PA</a>
+                    </div>
+                </div>
+
                 <a href="../contact.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">Contact Us</a>
                 <a href="../blog.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">Blog</a>
             </div>
@@ -223,6 +256,11 @@
         btn.addEventListener('click', () => {
             menu.classList.toggle('hidden');
         });
+
+        function toggleMobileSubmenu(id) {
+            const element = document.getElementById(id);
+            element.classList.toggle('hidden');
+        }
     </script>
 </body>
 </html>

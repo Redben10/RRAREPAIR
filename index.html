@@ -1,27 +1,377 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <title>Home | River Run Appliance Repair</title>
-  </head>
-  <body>
-    <div class="bg-slate-800 h-[10vh] p-4 flex items-center relative">
-      <div class="absolute left-4">
-        <img class="h-[8vh] px-10 w-auto" src="images/RiverRun_Logo.png" alt="River Run Appliance Repair | Logo">
-      </div>
-      
-      <div class="flex justify-center w-[100vw]">
-        <div class="flex space-x-6 rounded-2xl border-3 border-yellow-300 px-6 py-2">
-          <a class="text-white bg-sky-700 rounded-2xl px-4 py-2 flex items-center justify-center" href="/">Home</a>
-          <a class="text-white px-4 py-2 flex items-center justify-center" href="/locations">Locations</a>
-          <a class="text-white px-4 py-2 flex items-center justify-center" href="/services">Services</a>
-          <a class="text-white px-4 py-2 flex items-center justify-center" href="/contact">Contact Us</a>
-          <a class="text-white px-4 py-2 flex items-center justify-center" href="/team">Our Team</a>
-          <a class="text-white px-4 py-2 flex items-center justify-center" href="https://app.service.works/CustomerPortal/LogInV2">Customer Portal</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>River Run Appliance Repair</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0056b3', // Deep Blue
+                        secondary: '#f3f4f6', // Light Gray
+                        accent: '#fbbf24', // Amber
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom styles for dropdowns */
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans text-gray-800">
+
+    <!-- Topbar / Navbar -->
+    <nav class="bg-white shadow-md fixed w-full z-50 top-0">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html">
+                        <img class="h-16 w-auto" src="RiverRun_Logo.avif" alt="River Run Appliance Repair">
+                    </a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="index.html" class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Home</a>
+
+                    <!-- Locations Dropdown -->
+                    <div class="relative dropdown">
+                        <button class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium inline-flex items-center">
+                            Locations
+                            <svg class="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="dropdown-menu absolute hidden bg-white shadow-lg rounded-md mt-0 w-40 py-2 border border-gray-100">
+                            <a href="#midlothian" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Midlothian, VA</a>
+                            <a href="#kittanning" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Kittanning, PA</a>
+                        </div>
+                    </div>
+
+                    <!-- Services Dropdown -->
+                    <div class="relative dropdown">
+                        <button class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium inline-flex items-center">
+                            Services
+                            <svg class="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="dropdown-menu absolute hidden bg-white shadow-lg rounded-md mt-0 w-56 py-2 border border-gray-100">
+                            <a href="#services" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Washing Machines</a>
+                            <a href="#services" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Microwaves</a>
+                            <a href="#services" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Dryers</a>
+                            <a href="#services" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Refrigerators</a>
+                            <a href="#services" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Dishwashers</a>
+                            <a href="#services" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Electric Cooktop</a>
+                            <a href="#services" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Range and Oven</a>
+                        </div>
+                    </div>
+
+                    <!-- Brands Dropdown -->
+                    <div class="relative dropdown">
+                        <button class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium inline-flex items-center">
+                            Brands We Service
+                            <svg class="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="dropdown-menu absolute hidden bg-white shadow-lg rounded-md mt-0 w-64 py-2 border border-gray-100 max-h-96 overflow-y-auto">
+                            <!-- List of brands -->
+                            <a href="#brands" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Amana</a>
+                            <a href="#brands" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Electrolux</a>
+                            <a href="#brands" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Frigidaire</a>
+                            <a href="#brands" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Fisher Paykel</a>
+                            <a href="#brands" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">GE</a>
+                            <a href="#brands" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Hisense</a>
+                            <a href="#brands" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Hotpoint</a>
+                            <a href="#brands" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Inglis</a>
+                            <a href="#brands" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Kenmore</a>
+                            <a href="#brands" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Kenmore Elite</a>
+                            <a href="#brands" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">KitchenAid</a>
+                            <a href="#brands" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">JennAire</a>
+                            <a href="#brands" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">LG</a>
+                            <a href="#brands" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Maytag</a>
+                            <a href="#brands" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Midea</a>
+                            <a href="#brands" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Roper</a>
+                            <a href="#brands" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Samsung</a>
+                            <a href="#brands" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Speed Queen</a>
+                            <a href="#brands" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Whirlpool</a>
+                        </div>
+                    </div>
+
+                    <a href="#contact" class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Contact Us</a>
+                    <a href="privacy.html" class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Privacy</a>
+                    <a href="blog.html" class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Blog</a>
+                </div>
+                
+                <!-- Mobile menu button (simplified for now) -->
+                <div class="md:hidden flex items-center">
+                    <button class="text-gray-700 hover:text-primary focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
         </div>
-      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="relative bg-white overflow-hidden mt-20">
+        <div class="max-w-7xl mx-auto">
+            <div class="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
+                <main class="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
+                    <div class="sm:text-center lg:text-left">
+                        <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
+                            <span class="block xl:inline">Expert Appliance Repair</span>
+                            <span class="block text-primary">You Can Trust</span>
+                        </h1>
+                        <p class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
+                            Professional repair services for all your major home appliances. Serving Midlothian, VA and Kittanning, PA.
+                        </p>
+                        <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
+                            <div class="rounded-md shadow">
+                                <a href="#contact" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-blue-700 md:py-4 md:text-lg md:px-10">
+                                    Contact Us
+                                </a>
+                            </div>
+                            <div class="mt-3 sm:mt-0 sm:ml-3">
+                                <a href="#services" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-primary bg-blue-100 hover:bg-blue-200 md:py-4 md:text-lg md:px-10">
+                                    View Services
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+        <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 bg-gray-200 flex items-center justify-center">
+            <!-- Placeholder for a hero image if available, or just a nice pattern -->
+            <div class="text-gray-400 text-center p-10">
+                <svg class="h-32 w-32 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+                <span class="text-xl font-semibold">Quality Service Guaranteed</span>
+            </div>
+        </div>
     </div>
-  </body>
+
+    <!-- Services Section -->
+    <div id="services" class="py-12 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center">
+                <h2 class="text-base text-primary font-semibold tracking-wide uppercase">What We Do</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    Our Services
+                </p>
+                <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+                    We service a wide range of household appliances.
+                </p>
+            </div>
+
+            <div class="mt-10">
+                <dl class="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
+                    <!-- Service Items -->
+                    <div class="relative">
+                        <dt>
+                            <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-primary text-white">
+                                <!-- Icon -->
+                                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                            </div>
+                            <p class="ml-16 text-lg leading-6 font-medium text-gray-900">Washing Machines</p>
+                        </dt>
+                        <dd class="mt-2 ml-16 text-base text-gray-500">
+                            Expert repair for all types of washing machines.
+                        </dd>
+                    </div>
+
+                    <div class="relative">
+                        <dt>
+                            <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-primary text-white">
+                                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                            </div>
+                            <p class="ml-16 text-lg leading-6 font-medium text-gray-900">Microwaves</p>
+                        </dt>
+                        <dd class="mt-2 ml-16 text-base text-gray-500">
+                            Quick and safe microwave repairs.
+                        </dd>
+                    </div>
+
+                    <div class="relative">
+                        <dt>
+                            <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-primary text-white">
+                                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                            </div>
+                            <p class="ml-16 text-lg leading-6 font-medium text-gray-900">Dryers</p>
+                        </dt>
+                        <dd class="mt-2 ml-16 text-base text-gray-500">
+                            Get your dryer running efficiently again.
+                        </dd>
+                    </div>
+
+                    <div class="relative">
+                        <dt>
+                            <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-primary text-white">
+                                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                            </div>
+                            <p class="ml-16 text-lg leading-6 font-medium text-gray-900">Refrigerators</p>
+                        </dt>
+                        <dd class="mt-2 ml-16 text-base text-gray-500">
+                            Keep your food fresh with our refrigerator repair services.
+                        </dd>
+                    </div>
+
+                    <div class="relative">
+                        <dt>
+                            <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-primary text-white">
+                                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                            </div>
+                            <p class="ml-16 text-lg leading-6 font-medium text-gray-900">Dishwashers</p>
+                        </dt>
+                        <dd class="mt-2 ml-16 text-base text-gray-500">
+                            Fixing leaks, drainage issues, and more.
+                        </dd>
+                    </div>
+
+                    <div class="relative">
+                        <dt>
+                            <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-primary text-white">
+                                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                            </div>
+                            <p class="ml-16 text-lg leading-6 font-medium text-gray-900">Electric Cooktop, Range and Oven</p>
+                        </dt>
+                        <dd class="mt-2 ml-16 text-base text-gray-500">
+                            Cooking appliance repairs for your kitchen.
+                        </dd>
+                    </div>
+                </dl>
+            </div>
+        </div>
+    </div>
+
+    <!-- Brands Section -->
+    <div id="brands" class="py-12 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center mb-10">
+                <h2 class="text-base text-primary font-semibold tracking-wide uppercase">Brands</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    Brands We Service
+                </p>
+            </div>
+            <div class="grid grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-6">
+                <!-- Brand Items -->
+                <div class="p-4 bg-gray-50 rounded-lg text-center font-medium text-gray-700">Amana</div>
+                <div class="p-4 bg-gray-50 rounded-lg text-center font-medium text-gray-700">Electrolux</div>
+                <div class="p-4 bg-gray-50 rounded-lg text-center font-medium text-gray-700">Frigidaire</div>
+                <div class="p-4 bg-gray-50 rounded-lg text-center font-medium text-gray-700">Fisher Paykel</div>
+                <div class="p-4 bg-gray-50 rounded-lg text-center font-medium text-gray-700">GE</div>
+                <div class="p-4 bg-gray-50 rounded-lg text-center font-medium text-gray-700">Hisense</div>
+                <div class="p-4 bg-gray-50 rounded-lg text-center font-medium text-gray-700">Hotpoint</div>
+                <div class="p-4 bg-gray-50 rounded-lg text-center font-medium text-gray-700">Inglis</div>
+                <div class="p-4 bg-gray-50 rounded-lg text-center font-medium text-gray-700">Kenmore</div>
+                <div class="p-4 bg-gray-50 rounded-lg text-center font-medium text-gray-700">Kenmore Elite</div>
+                <div class="p-4 bg-gray-50 rounded-lg text-center font-medium text-gray-700">KitchenAid</div>
+                <div class="p-4 bg-gray-50 rounded-lg text-center font-medium text-gray-700">JennAire</div>
+                <div class="p-4 bg-gray-50 rounded-lg text-center font-medium text-gray-700">LG</div>
+                <div class="p-4 bg-gray-50 rounded-lg text-center font-medium text-gray-700">Maytag</div>
+                <div class="p-4 bg-gray-50 rounded-lg text-center font-medium text-gray-700">Midea</div>
+                <div class="p-4 bg-gray-50 rounded-lg text-center font-medium text-gray-700">Roper</div>
+                <div class="p-4 bg-gray-50 rounded-lg text-center font-medium text-gray-700">Samsung</div>
+                <div class="p-4 bg-gray-50 rounded-lg text-center font-medium text-gray-700">Speed Queen</div>
+                <div class="p-4 bg-gray-50 rounded-lg text-center font-medium text-gray-700">Whirlpool</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact / Locations Section -->
+    <div id="contact" class="py-12 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center mb-10">
+                <h2 class="text-base text-primary font-semibold tracking-wide uppercase">Contact Us</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    Get In Touch
+                </p>
+                <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+                    Phones are open Mon-Fri from 8:30AM - 5PM
+                </p>
+                <p class="mt-2 text-lg text-gray-600">
+                    Email: <a href="mailto:Admin@rrarepair.com" class="text-primary hover:underline">Admin@rrarepair.com</a>
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Midlothian -->
+                <div id="midlothian" class="bg-white overflow-hidden shadow rounded-lg">
+                    <div class="px-4 py-5 sm:p-6 text-center">
+                        <h3 class="text-lg leading-6 font-medium text-gray-900">Midlothian, VA</h3>
+                        <div class="mt-2 max-w-xl text-sm text-gray-500 mx-auto">
+                            <p>Serving the Midlothian area.</p>
+                        </div>
+                        <div class="mt-5">
+                            <a href="tel:8049249244" class="text-2xl font-bold text-primary hover:text-blue-700">(804) 924-9244</a>
+                        </div>
+                        <div class="mt-5">
+                            <a href="https://app.service.works/InstantBooking/DynamicView?Template=OTIz" target="_blank" class="inline-flex items-center justify-center px-4 py-2 border border-transparent font-medium rounded-md text-white bg-primary hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:text-sm">
+                                Book VA Repair
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kittanning -->
+                <div id="kittanning" class="bg-white overflow-hidden shadow rounded-lg">
+                    <div class="px-4 py-5 sm:p-6 text-center">
+                        <h3 class="text-lg leading-6 font-medium text-gray-900">Kittanning, PA</h3>
+                        <div class="mt-2 max-w-xl text-sm text-gray-500 mx-auto">
+                            <p>Serving the Kittanning area.</p>
+                        </div>
+                        <div class="mt-5">
+                            <a href="tel:7249195099" class="text-2xl font-bold text-primary hover:text-blue-700">(724) 919-5099</a>
+                        </div>
+                        <div class="mt-5">
+                            <a href="https://app.service.works/InstantBooking/DynamicView?Template=MTE2NA==" target="_blank" class="inline-flex items-center justify-center px-4 py-2 border border-transparent font-medium rounded-md text-white bg-primary hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:text-sm">
+                                Book PA Repair
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-4 md:mb-0">
+                <p>&copy; 2025 River Run Appliance Repair. All rights reserved.</p>
+            </div>
+            <div class="flex space-x-4">
+                <a href="privacy.html" class="text-gray-300 hover:text-white">Privacy Policy</a>
+                <a href="#contact" class="text-gray-300 hover:text-white">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Booking Box -->
+    <div class="fixed bottom-4 right-4 z-50 bg-white border border-gray-200 shadow-2xl rounded-lg p-4 w-64 hidden md:block">
+        <div class="mb-4 border-b border-gray-100 pb-4">
+            <p class="text-sm font-bold text-gray-900">Midlothian, VA</p>
+            <a href="tel:8049249244" class="text-sm text-primary block mb-2">(804) 924-9244</a>
+            <a href="https://app.service.works/InstantBooking/DynamicView?Template=OTIz" target="_blank" class="block w-full text-center bg-primary text-white text-xs font-bold py-2 px-2 rounded hover:bg-blue-700 transition duration-150">
+                Book VA Repair
+            </a>
+        </div>
+        <div>
+            <p class="text-sm font-bold text-gray-900">Kittanning, PA</p>
+            <a href="tel:7249195099" class="text-sm text-primary block mb-2">(724) 919-5099</a>
+            <a href="https://app.service.works/InstantBooking/DynamicView?Template=MTE2NA==" target="_blank" class="block w-full text-center bg-primary text-white text-xs font-bold py-2 px-2 rounded hover:bg-blue-700 transition duration-150">
+                Book PA Repair
+            </a>
+        </div>
+    </div>
+
+</body>
 </html>

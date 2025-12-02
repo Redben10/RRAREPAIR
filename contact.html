@@ -201,6 +201,11 @@
         btn.addEventListener('click', () => {
             menu.classList.toggle('hidden');
         });
+
+        function toggleMobileSubmenu(id) {
+            const element = document.getElementById(id);
+            element.classList.toggle('hidden');
+        }
     </script>
 </body>
 </html>
